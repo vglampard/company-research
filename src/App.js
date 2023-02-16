@@ -87,6 +87,15 @@ function App() {
         <button onClick={(e) => search(company, e)} value="company+address+hq">
           Address
         </button>
+        <button onClick={(e) => search(company, e)} value="mission">
+          Mission
+        </button>
+        <button onClick={(e) => search(company, e)} value="values">
+          Values
+        </button>
+        <button onClick={(e) => search(company, e)} value="employee+benefits">
+          Benefits
+        </button>
         </div>
       </header>
     </div>
