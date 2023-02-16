@@ -9,15 +9,15 @@ function App() {
     setCompany(e.target.value);
   }
 
-  //   const TEXT_SEARCHES = {
-  //     linkedin: "linkedIn" ,
-  //     crunchbase: "crunchbase",
-  //     glassdoor: "glassdoor",
-  //   }
-  // const IMAGE_SEARCHES = {
-  //   favicon: "favicon",
-  //   logo: "logo+high+resolution+transparent+background+svg",
-  // }
+    const TEXT_SEARCHES = {
+      linkedin: "linkedIn" ,
+      crunchbase: "crunchbase",
+      glassdoor: "glassdoor",
+    }
+  const IMAGE_SEARCHES = {
+    favicon: "favicon",
+    logo: "logo+high+resolution+transparent+background+svg",
+  }
 
   function search(company, e) {
     window.open(
@@ -36,17 +36,16 @@ function App() {
     window.open(`https://www.google.com/search?q=${company}&tbm=nws`);
   }
 
-  //   function searchAll(company){
-  // // take company from input
-  // // call search for every string value in the text search object
-  // // call image search for every string value in image search object
+    function searchAll(company){
+  // take company from input
+  // call search for every string value in the text search object
+  // call image search for every string value in image search object
 
-  // // for (const searchTerm in TEXT_SEARCHES){
-  // //   setTimeout(function(){window.open(`https://www.google.com/search?q=${company}+${searchTerm}&tbm=isch`);
-  // // console.log("ST:", searchTerm)}, 1000)
-  // // }
-
-  //   }
+  for (const searchTerm in TEXT_SEARCHES){
+    setTimeout(function(){window.open(`https://www.google.com/search?q=${company}+${searchTerm}&tbm=isch`);
+  console.log("ST:", searchTerm)}, 1000)
+  }
+    }
 
   return (
     <div className="App">
