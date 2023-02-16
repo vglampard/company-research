@@ -59,6 +59,7 @@ function App() {
         ></input>
         {/* <button onClick = {()=>searchAll(company)}>Get all! </button> */}
         <br></br>
+        <div className="button-container">
         <button onClick={(e) => search(company, e)} value="linkedIn">
           LinkedIn
         </button>
@@ -86,6 +87,7 @@ function App() {
         <button onClick={(e) => search(company, e)} value="company+address+hq">
           Address
         </button>
+        </div>
       </header>
     </div>
   );
