@@ -9,21 +9,10 @@ function App() {
     setCompany(e.target.value);
   }
 
-    const TEXT_SEARCHES = {
-      linkedin: "linkedIn" ,
-      crunchbase: "crunchbase",
-      glassdoor: "glassdoor",
-    }
-  const IMAGE_SEARCHES = {
-    favicon: "favicon",
-    logo: "logo+high+resolution+transparent+background+svg",
-  }
-
   function search(company, e) {
-    window.open(
+window.open(
       `https://www.google.com/search?q=${company}+${e.currentTarget.value}`
     );
-    console.log("button:", e.currentTarget.value);
   }
 
   function imageSearch(company, e) {
@@ -47,6 +36,8 @@ function App() {
   }
     }
 
+// TEST: render buttons from object 
+
   return (
     <div className="App">
       <header className="App-header">
@@ -57,7 +48,6 @@ function App() {
           placeholder="company name here"
           onChange={handleChange}
         ></input>
-        {/* <button onClick = {()=>searchAll(company)}>Get all! </button> */}
         <br></br>
         <div className="button-container">
         <button onClick={(e) => search(company, e)} value="linkedIn">
