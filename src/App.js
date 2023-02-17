@@ -13,8 +13,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>No more repeated googling!</p>
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+        <p>Enter company name & use buttons to quickSearch</p>
         <input
           type="text"
           placeholder="Company name here..."
