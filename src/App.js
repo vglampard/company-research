@@ -10,7 +10,7 @@ function App() {
   }
 
   function search(company, e) {
-window.open(
+    window.open(
       `https://www.google.com/search?q=${company}+${e.currentTarget.value}`
     );
   }
@@ -25,18 +25,23 @@ window.open(
     window.open(`https://www.google.com/search?q=${company}&tbm=nws`);
   }
 
-    function searchAll(company){
-  // take company from input
-  // call search for every string value in the text search object
-  // call image search for every string value in image search object
-
-  for (const searchTerm in TEXT_SEARCHES){
-    setTimeout(function(){window.open(`https://www.google.com/search?q=${company}+${searchTerm}&tbm=isch`);
-  console.log("ST:", searchTerm)}, 1000)
-  }
-    }
-
-// TEST: render buttons from object 
+  // TEST: render buttons from object
+  const SEARCHES = {
+    Linkedin: ["linkedIn", (e) => search(company, e)],
+    Crunchbase: ["crunchbase", (e) => search(company, e)],
+    Glassdoor: ["glassdoor", (e) => search(company, e)],
+    Logo: [
+      "logo+high+resolution+transparent+background+svg",
+      (e) => imageSearch(company, e),
+    ],
+    Favicon: ["favicon", (e) => imageSearch(company, e)],
+    News: ["news", (e) => newsSearch(company, e)],
+    Founders: ["founders", (e) => search(company, e)],
+    Address: ["company+legal+address+hq", (e) => search(company, e)],
+    Mission: ["company+mission", (e) => search(company, e)],
+    Values: ["company+values", (e) => search(company, e)],
+    Benefits: ["employee+benefits", (e) => search(company, e)],
+  };
 
   return (
     <div className="App">
@@ -48,44 +53,21 @@ window.open(
           placeholder="company name here"
           onChange={handleChange}
         ></input>
+
         <br></br>
         <div className="button-container">
-        <button onClick={(e) => search(company, e)} value="linkedIn">
-          LinkedIn
-        </button>
-        <button onClick={(e) => search(company, e)} value="crunchbase">
-          Crunchbase
-        </button>
-        <button onClick={(e) => search(company, e)} value="glassdoor">
-          Glassdoor
-        </button>
-        <button
-          onClick={(e) => imageSearch(company, e)}
-          value="logo+high+resolution+transparent+background+svg"
-        >
-          Logo
-        </button>
-        <button onClick={(e) => imageSearch(company, e)} value="favicon">
-          Favicon
-        </button>
-        <button onClick={(e) => newsSearch(company, e)} value="news">
-          News
-        </button>
-        <button onClick={(e) => search(company, e)} value="founders">
-          Founders
-        </button>
-        <button onClick={(e) => search(company, e)} value="company+address+hq">
-          Address
-        </button>
-        <button onClick={(e) => search(company, e)} value="mission">
-          Mission
-        </button>
-        <button onClick={(e) => search(company, e)} value="values">
-          Values
-        </button>
-        <button onClick={(e) => search(company, e)} value="employee+benefits">
-          Benefits
-        </button>
+          {Object.keys(SEARCHES).map((searchTerm, i) => (
+            <>
+              <button
+                key={i}
+                value={SEARCHES[searchTerm][0]}
+                onClick={SEARCHES[searchTerm][1]}
+              >
+                {" "}
+                {searchTerm}
+              </button>
+            </>
+          ))}
         </div>
       </header>
     </div>
@@ -93,3 +75,22 @@ window.open(
 }
 
 export default App;
+
+// <button onClick={(e) => newsSearch(company, e)} value="news">
+// News
+// </button>
+// <button onClick={(e) => search(company, e)} value="founders">
+// Founders
+// </button>
+// <button onClick={(e) => search(company, e)} value="company+address+hq">
+// Address
+// </button>
+// <button onClick={(e) => search(company, e)} value="mission">
+// Mission
+// </button>
+// <button onClick={(e) => search(company, e)} value="values">
+// Values
+// </button>
+// <button onClick={(e) => search(company, e)} value="employee+benefits">
+// Benefits
+// </button>
