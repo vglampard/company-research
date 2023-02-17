@@ -1,12 +1,13 @@
-# INITIAL PLAN
+# Company QuickSearch Tool 
 
-Features:
--> open search pages for legal name, glassdoor, linkedin, address, logo, favicon, 
+Simple app that speeds up the company research process. Fewer clicks, faster writeups! 
 
-https://www.google.com/search?q=amazon+&biw=2048&bih=994&tbm=nws&sxsrf=AJOqlzXnKhptPFRVhGv0lJK9VYzu3En3cg%3A1676587107327&ei=Y7DuY-7PE_iI9u8PvvudsAE&ved=0ahUKEwiujd7XjZv9AhV4hP0HHb59BxYQ4dUDCA0&uact=5&oq=amazon+&gs_lcp=Cgxnd3Mtd2l6LW5ld3MQAzIECAAQQzIECAAQQzINCAAQgAQQsQMQgwEQCjIECAAQQzIECAAQQzIECAAQQzIKCAAQsQMQgwEQQzIECAAQQzINCAAQgAQQsQMQgwEQCjIECAAQQzoHCAAQsQMQQzoICAAQgAQQsQM6BQgAEIAEUJgCWJgCYL0IaAFwAHgAgAFXiAGsAZIBATKYAQCgAQHAAQE&sclient=gws-wiz-news
+Instead of googling multiple different search terms for the same company, users can type in the copmany name and use the buttons to run these searches instead.
 
-https://www.google.com/search?q=amazon+&tbm=isch&ved=2ahUKEwimhrj1jZv9AhXjnCcCHTXZCBIQ2-cCegQIABAA&oq=amazon+&gs_lcp=CgNpbWcQAzIECCMQJzIECCMQJzIICAAQgAQQsQMyCAgAEIAEELEDMggIABCABBCxAzIICAAQgAQQsQMyCAgAEIAEELEDMggIABCABBCxAzIICAAQgAQQsQMyCAgAEIAEELEDOgUIABCABFC3BVi3BWCYTmgAcAB4AIABW4gBswGSAQEymAEAoAEBqgELZ3dzLXdpei1pbWfAAQE&sclient=img&ei=obDuY-axJeO5nsEPtbKjkAE&bih=981&biw=960
+The search will automatically be run with any additional strings that are commonly used (hard-coded).
 
-tbm=nws
+The 'Logo', 'Favicon', and 'News' buttons will directly open the image or news results page. 
 
-Can button value be an array?
+For example, typing in 'CompanyName' and clicking 'Logo' will run a search for "CompanyName logo high resolution transparent background svg" and take users directly to the google image results page.
+
+Clicking 'News' will run a search for "CompanyName news" and take users directly to the google news results page. 
