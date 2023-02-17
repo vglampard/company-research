@@ -15,6 +15,7 @@ export default function ButtonsDisplay({ company }) {
     Mission: ["company+mission", ""],
     Values: ["company+values", ""],
     Benefits: ["employee+benefits", ""],
+    Controversies: ["controversy+scandal+issues+disputes", ""]
   };
 
   // function that uses values taken from input (company name) and button (additional search terms and search type parameter) to open google window with basic/news/image search results.
