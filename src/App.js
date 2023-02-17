@@ -2,6 +2,7 @@ import logo from "./logo.png";
 import "./App.css";
 import { useState } from "react";
 import ButtonsDisplay from "./ButtonsDisplay/ButtonsDisplay";
+import ToolsDisplay from "./ToolsDisplay/ToolsDisplay";
 
 function App() {
   const [company, setCompany] = useState("");
@@ -23,6 +24,9 @@ function App() {
         <br></br>
         <div className="button-container">
          <ButtonsDisplay company = {company}/>
+        </div>
+        <div className = "tools-container">
+<ToolsDisplay/>
         </div>
       </header>
     </div>
