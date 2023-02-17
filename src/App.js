@@ -25,16 +25,7 @@ window.open(
     window.open(`https://www.google.com/search?q=${company}&tbm=nws`);
   }
 
-    function searchAll(company){
-  // take company from input
-  // call search for every string value in the text search object
-  // call image search for every string value in image search object
 
-  // for (const searchTerm in TEXT_SEARCHES){
-  //   setTimeout(function(){window.open(`https://www.google.com/search?q=${company}+${searchTerm}&tbm=isch`);
-  // console.log("ST:", searchTerm)}, 1000)
-  // }
-    }
 
 // TEST: render buttons from object 
 const SEARCHES = {
@@ -42,7 +33,6 @@ const SEARCHES = {
   crunchbase: ["crunchbase",(e) => search(company, e)],
   glassdoor: ["glassdoor",(e) => search(company, e)]
 }
-
 
 
   return (
@@ -59,7 +49,7 @@ const SEARCHES = {
 {Object.keys(SEARCHES).map((searchTerm, i)=>(
   <>
   {console.log("fc:", SEARCHES[searchTerm][1])}
-  <button key={i}> {searchTerm}</button>
+  <button key={i} value = {searchTerm} onClick={SEARCHES[searchTerm][1]}> {searchTerm}</button>
   </>
 ))}
         <br></br>
