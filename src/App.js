@@ -10,7 +10,7 @@ function App() {
   }
 
   function search(company, e) {
-window.open(
+    window.open(
       `https://www.google.com/search?q=${company}+${e.currentTarget.value}`
     );
   }
@@ -25,15 +25,23 @@ window.open(
     window.open(`https://www.google.com/search?q=${company}&tbm=nws`);
   }
 
-
-
-// TEST: render buttons from object 
-const SEARCHES = {
-  linkedin: ["linkedIn",(e) => search(company, e)] ,
-  crunchbase: ["crunchbase",(e) => search(company, e)],
-  glassdoor: ["glassdoor",(e) => search(company, e)]
-}
-
+  // TEST: render buttons from object
+  const SEARCHES = {
+    Linkedin: ["linkedIn", (e) => search(company, e)],
+    Crunchbase: ["crunchbase", (e) => search(company, e)],
+    Glassdoor: ["glassdoor", (e) => search(company, e)],
+    Logo: [
+      "logo+high+resolution+transparent+background+svg",
+      (e) => imageSearch(company, e),
+    ],
+    Favicon: ["favicon", (e) => imageSearch(company, e)],
+    News: ["news", (e) => newsSearch(company, e)],
+    Founders: ["founders", (e) => search(company, e)],
+    Address: ["company+legal+address+hq", (e) => search(company, e)],
+    Mission: ["company+mission", (e) => search(company, e)],
+    Values: ["company+values", (e) => search(company, e)],
+    Benefits: ["employee+benefits", (e) => search(company, e)],
+  };
 
   return (
     <div className="App">
@@ -45,16 +53,21 @@ const SEARCHES = {
           placeholder="company name here"
           onChange={handleChange}
         ></input>
-        
-{Object.keys(SEARCHES).map((searchTerm, i)=>(
-  <>
-  {console.log("fc:", SEARCHES[searchTerm][1])}
-  <button key={i} value = {searchTerm} onClick={SEARCHES[searchTerm][1]}> {searchTerm}</button>
-  </>
-))}
+
         <br></br>
         <div className="button-container">
- 
+          {Object.keys(SEARCHES).map((searchTerm, i) => (
+            <>
+              <button
+                key={i}
+                value={SEARCHES[searchTerm][0]}
+                onClick={SEARCHES[searchTerm][1]}
+              >
+                {" "}
+                {searchTerm}
+              </button>
+            </>
+          ))}
         </div>
       </header>
     </div>
@@ -63,40 +76,21 @@ const SEARCHES = {
 
 export default App;
 
-
-{/* <button onClick={(e) => search(company, e)} value="linkedIn">
-LinkedIn
-</button>
-<button onClick={(e) => search(company, e)} value="crunchbase">
-Crunchbase
-</button>
-<button onClick={(e) => search(company, e)} value="glassdoor">
-Glassdoor
-</button>
-<button
-onClick={(e) => imageSearch(company, e)}
-value="logo+high+resolution+transparent+background+svg"
->
-Logo
-</button>
-<button onClick={(e) => imageSearch(company, e)} value="favicon">
-Favicon
-</button>
-<button onClick={(e) => newsSearch(company, e)} value="news">
-News
-</button>
-<button onClick={(e) => search(company, e)} value="founders">
-Founders
-</button>
-<button onClick={(e) => search(company, e)} value="company+address+hq">
-Address
-</button>
-<button onClick={(e) => search(company, e)} value="mission">
-Mission
-</button>
-<button onClick={(e) => search(company, e)} value="values">
-Values
-</button>
-<button onClick={(e) => search(company, e)} value="employee+benefits">
-Benefits
-</button> */}
+// <button onClick={(e) => newsSearch(company, e)} value="news">
+// News
+// </button>
+// <button onClick={(e) => search(company, e)} value="founders">
+// Founders
+// </button>
+// <button onClick={(e) => search(company, e)} value="company+address+hq">
+// Address
+// </button>
+// <button onClick={(e) => search(company, e)} value="mission">
+// Mission
+// </button>
+// <button onClick={(e) => search(company, e)} value="values">
+// Values
+// </button>
+// <button onClick={(e) => search(company, e)} value="employee+benefits">
+// Benefits
+// </button>
