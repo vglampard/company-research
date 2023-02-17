@@ -1,7 +1,6 @@
 import logo from "./logo.png";
 import "./App.css";
 import { useState } from "react";
-import { getLinkedIn } from "./searchFunctions/searchFunction";
 
 function App() {
   const [company, setCompany] = useState("");
@@ -9,21 +8,12 @@ function App() {
     setCompany(e.target.value);
   }
 
-  function search(company, e) {
+  function search(company, e, param) {
     window.open(
-      `https://www.google.com/search?q=${company}+${e.currentTarget.value}`
+      `https://www.google.com/search?q=${company}+${e.currentTarget.value}${param}`
     );
   }
 
-  function imageSearch(company, e) {
-    window.open(
-      `https://www.google.com/search?q=${company}+${e.currentTarget.value}&tbm=isch`
-    );
-  }
-
-  function newsSearch(company, e) {
-    window.open(`https://www.google.com/search?q=${company}&tbm=nws`);
-  }
 
   // TEST: render buttons from object
   const SEARCHES = {
@@ -32,10 +22,10 @@ function App() {
     Glassdoor: ["glassdoor", (e) => search(company, e)],
     Logo: [
       "logo+high+resolution+transparent+background+svg",
-      (e) => imageSearch(company, e),
+      (e) => search(company, e, "&tbm=isch"),
     ],
-    Favicon: ["favicon", (e) => imageSearch(company, e)],
-    News: ["news", (e) => newsSearch(company, e)],
+    Favicon: ["favicon", (e) => search(company, e, "&tbm=isch")],
+    News: ["news", (e) => search(company, e, "&tbm=nws")],
     Founders: ["founders", (e) => search(company, e)],
     Address: ["company+legal+address+hq", (e) => search(company, e)],
     Mission: ["company+mission", (e) => search(company, e)],
@@ -75,22 +65,3 @@ function App() {
 }
 
 export default App;
-
-// <button onClick={(e) => newsSearch(company, e)} value="news">
-// News
-// </button>
-// <button onClick={(e) => search(company, e)} value="founders">
-// Founders
-// </button>
-// <button onClick={(e) => search(company, e)} value="company+address+hq">
-// Address
-// </button>
-// <button onClick={(e) => search(company, e)} value="mission">
-// Mission
-// </button>
-// <button onClick={(e) => search(company, e)} value="values">
-// Values
-// </button>
-// <button onClick={(e) => search(company, e)} value="employee+benefits">
-// Benefits
-// </button>
