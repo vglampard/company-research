@@ -1,13 +1,17 @@
 # Company QuickSearch Tool 
 
-Simple app that speeds up the company research process. Fewer clicks, faster writeups! 
+## What is it?
 
-Instead of googling multiple different search terms for the same company, users can type in the copmany name and use the buttons to run these searches instead.
+A simple app that speeds up the company research process. Fewer clicks, faster writeups! 
 
-The search will automatically be run with any additional strings that are commonly used (hard-coded).
+Researchers run multiple searches with similar terms: "*companyName founders*", "*companyName hq address*", "*companyName logo transparent background svg*". Time consuming! Annoying!
 
-The 'Logo', 'Favicon', and 'News' buttons will directly open the image or news results page. 
+Here, users can type in the company name and use the buttons to run these searches instead.
+<br><br>
 
-For example, typing in 'CompanyName' and clicking 'Logo' will run a search for "CompanyName logo high resolution transparent background svg" and take users directly to the google image results page.
+## What features? 
 
-Clicking 'News' will run a search for "CompanyName news" and take users directly to the google news results page. 
+* Each button is hard-coded with additional strings that are commonly used (for example, "*transparent background svg*"). Users swap out multiple keystrokes for a single click.
+* The 'Logo', 'Favicon', and 'News' buttons will directly open the image or news results page. 
+* There's a direct link to the site where users can remove image backgrounds. 
+<br><br>

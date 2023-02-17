@@ -8,7 +8,7 @@ export default function ButtonsDisplay({ company }) {
     Crunchbase: ["crunchbase", ""],
     Glassdoor: ["glassdoor", ""],
     Logo: ["logo+high+resolution+transparent+background+svg", "&tbm=isch"],
-    Favicon: ["favicon", "&tbm=isch"],
+    Favicon: ["favicon+transparent", "&tbm=isch"],
     News: ["news", "&tbm=nws"],
     Founders: ["all+founders", ""],
     Address: ["company+legal+address+hq", ""],
