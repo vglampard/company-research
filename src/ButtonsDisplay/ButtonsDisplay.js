@@ -8,14 +8,14 @@ export default function ButtonsDisplay({ company }) {
     Crunchbase: ["crunchbase", ""],
     Glassdoor: ["glassdoor", ""],
     Logo: ["logo+high+resolution+transparent+background+svg", "&tbm=isch"],
-    Favicon: ["favicon+transparent-background", "&tbm=isch"],
-    News: ["news", "&tbm=nws"],
+    Favicon: ["favicon+transparent+background", "&tbm=isch"],
+    News: ["company+news", "&tbm=nws"],
     Founders: ["all+founders", ""],
     Address: ["company+legal+address+hq", ""],
     Mission: ["company+mission", ""],
     Values: ["company+values", ""],
     Benefits: ["employee+benefits+perks", ""],
-    Controversies: ["controversy+scandal+issues+disputes", ""]
+    Controversies: ["controversy+scandal+issues", ""]
   };
 
   // function that uses values taken from input (company name) and button (additional search terms and search type parameter) to open google window with basic/news/image search results.
