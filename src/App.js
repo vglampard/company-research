@@ -14,7 +14,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>Enter company name and hit buttons for quick google results</p>
+        <p>No more repeated googling!</p>
         <input
           type="text"
           placeholder="Company name here..."
