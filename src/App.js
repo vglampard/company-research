@@ -1,4 +1,4 @@
-import logo from "./logo.png";
+// import logo from "./logo.png";
 import "./App.css";
 import { useState } from "react";
 import ButtonsDisplay from "./ButtonsDisplay/ButtonsDisplay";
@@ -23,10 +23,10 @@ function App() {
 
         <br></br>
         <div className="button-container">
-         <ButtonsDisplay company = {company}/>
+          <ButtonsDisplay company={company} />
         </div>
-        <div className = "tools-container">
-<ToolsDisplay/>
+        <div className="tools-container">
+          <ToolsDisplay />
         </div>
       </header>
     </div>
