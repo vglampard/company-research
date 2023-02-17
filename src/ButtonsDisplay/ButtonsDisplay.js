@@ -10,7 +10,7 @@ export default function ButtonsDisplay({ company }) {
     Logo: ["logo+high+resolution+transparent+background+svg", "&tbm=isch"],
     Favicon: ["favicon", "&tbm=isch"],
     News: ["news", "&tbm=nws"],
-    Founders: ["founders", ""],
+    Founders: ["all+founders", ""],
     Address: ["company+legal+address+hq", ""],
     Mission: ["company+mission", ""],
     Values: ["company+values", ""],

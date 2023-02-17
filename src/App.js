@@ -16,7 +16,7 @@ function App() {
         <p>Enter company name and hit buttons for quick google results</p>
         <input
           type="text"
-          placeholder="company name here"
+          placeholder="Company name here..."
           onChange={handleChange}
         ></input>
 
