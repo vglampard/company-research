@@ -1,5 +1,5 @@
 import React from "react";
-
+import { GOOGLE_URL } from "../constants/constants";
 export default function ButtonsDisplay({ company }) {
   
   // Object containing search parameters/queries that is mapped over to create buttons with correct onClick functions and values
@@ -19,9 +19,10 @@ export default function ButtonsDisplay({ company }) {
   };
 
   // function that uses values taken from input (company name) and button (additional search terms and search type parameter) to open google window with basic/news/image search results.
-  function search(company, e, param) {
+  function search(company, additionalStrings, param) {
+    const searchString = `${company}+${additionalStrings}`
     window.open(
-      `https://www.google.com/search?q=${company}+${e.currentTarget.value}${param}`
+      GOOGLE_URL+searchString+param
     );
   }
 
@@ -30,6 +31,8 @@ export default function ButtonsDisplay({ company }) {
 // turn object.keys.map into normap arraay.map 
 // change searchType param into optional param in the search function 
 // change what e.target.value is passed down as 
+// combine company & additional string into single variable to putin URL 
+// pull out google uRL into its own config variable
 
 
   // Return set of buttons that each run a different kind of google search on the company name
@@ -40,7 +43,7 @@ export default function ButtonsDisplay({ company }) {
           <button
             key={i}
             value={SEARCHES[searchTerm][0]}
-            onClick={(e) => search(company, e, SEARCHES[searchTerm][1])}
+            onClick={(e) => search(company, e.target.value, SEARCHES[searchTerm][1])}
           >
             {" "}
             {searchTerm}

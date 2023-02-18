@@ -1,0 +1,1 @@
+export const GOOGLE_URL = "https://www.google.com/search?q="
