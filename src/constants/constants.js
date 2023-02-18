@@ -1,5 +1,7 @@
+// Base URL fragment for the google search
 export const GOOGLE_URL = "https://www.google.com/search?q=";
 
+// Object used to create buttons that add extra terms and parameters to the search URL
 export const SEARCHES = [
   {
     buttonText: "LinkedIn",
