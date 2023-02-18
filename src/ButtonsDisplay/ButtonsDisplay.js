@@ -40,16 +40,16 @@ export default function ButtonsDisplay({ company }) {
   // Return set of buttons that each run a different kind of google search on the company name
   return (
     <div>
-      {SEARCHES.map((search, i) => (
+      {SEARCHES.map((button, i) => (
 
         <>
           <button
             key={i}
-            value={search.searchTerms}
-            onClick={(e) => search(company, e.target.value, search.searchType)}
+            value={button.searchTerms}
+            onClick={(e) => search(company, e.target.value, button.searchType)}
           >
             {" "}
-            {search.buttonText}
+            {button.buttonText}
           </button>
         </>
       ))}
