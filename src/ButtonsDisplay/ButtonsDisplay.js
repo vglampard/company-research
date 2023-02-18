@@ -1,22 +1,22 @@
 import React from "react";
-import { GOOGLE_URL } from "../constants/constants";
+import { GOOGLE_URL, SEARCHES } from "../constants/constants";
+
 export default function ButtonsDisplay({ company }) {
-  
   // Object containing search parameters/queries that is mapped over to create buttons with correct onClick functions and values
-  const SEARCHES = {
-    Linkedin: ["linkedin", ""],
-    Crunchbase: ["crunchbase", ""],
-    Glassdoor: ["glassdoor", ""],
-    Logo: ["logo+high+resolution+transparent+background+svg", "&tbm=isch"],
-    Favicon: ["favicon+transparent+background", "&tbm=isch"],
-    News: ["company+news", "&tbm=nws"],
-    Founders: ["all+founders", ""],
-    Address: ["company+legal+address+hq", ""],
-    Mission: ["company+mission", ""],
-    Values: ["company+values", ""],
-    Benefits: ["employee+benefits+perks", ""],
-    Controversies: ["controversy+scandal+issues", ""]
-  };
+  // const SEARCHES = {
+  //   Linkedin: ["linkedin", ""],
+  //   Crunchbase: ["crunchbase", ""],
+  //   Glassdoor: ["glassdoor", ""],
+  //   Logo: ["logo+high+resolution+transparent+background+svg", "&tbm=isch"],
+  //   Favicon: ["favicon+transparent+background", "&tbm=isch"],
+  //   News: ["company+news", "&tbm=nws"],
+  //   Founders: ["all+founders", ""],
+  //   Address: ["company+legal+address+hq", ""],
+  //   Mission: ["company+mission", ""],
+  //   Values: ["company+values", ""],
+  //   Benefits: ["employee+benefits+perks", ""],
+  //   Controversies: ["controversy+scandal+issues", ""]
+  // };
 // the searchType param is now oprional
 
 
@@ -40,15 +40,16 @@ export default function ButtonsDisplay({ company }) {
   // Return set of buttons that each run a different kind of google search on the company name
   return (
     <div>
-      {Object.keys(SEARCHES).map((searchTerm, i) => (
+      {SEARCHES.map((search, i) => (
+
         <>
           <button
             key={i}
-            value={SEARCHES[searchTerm][0]}
-            onClick={(e) => search(company, e.target.value, SEARCHES[searchTerm][1])}
+            value={search.searchTerms}
+            onClick={(e) => search(company, e.target.value, search.searchType)}
           >
             {" "}
-            {searchTerm}
+            {search.buttonText}
           </button>
         </>
       ))}
