@@ -7,9 +7,8 @@
   pointer-events: none;
 }
 
-
 .App-header {
-  background-color: #E3D015;
+  background-color: #e3d015;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -19,9 +18,8 @@
   color: black;
 }
 
-
 button {
-  background-color: #E3D015;
+  background-color: #e3d015;
   border: 0 solid #e2e8f0;
   border-radius: 1.5rem;
   box-sizing: border-box;
@@ -29,7 +27,9 @@ button {
 
   cursor: pointer;
   display: inline-block;
-  font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-family: "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 0.8rem;
   font-weight: 600;
   line-height: 1;
@@ -37,14 +37,14 @@ button {
   text-align: center;
   text-decoration: none #0d172a solid;
   text-decoration-thickness: auto;
-  transition: all .1s cubic-bezier(.4, 0, .2, 1);
+  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 10px 10px 5px rgba(51, 51, 53, 0.25);
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
 }
 
-input{
+input {
   border-radius: 50px;
   height: 20px;
 }
@@ -61,15 +61,14 @@ button:hover {
   }
 }
 
-.tools-container{
+.tools-container {
   margin: 4vh;
   padding: 10px;
-  background-color: #e2e8f0;
   border-radius: 10px;
-    outline: solid;
-  outline-width: 1px; 
+  outline: solid;
+  outline-width: 2px;
 }
 
-.button-container{
-  width: 75vw
+.button-container {
+  width: 75vw;
 }

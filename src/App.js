@@ -1,4 +1,3 @@
-// import logo from "./logo.png";
 import "./App.css";
 import { useState } from "react";
 import ButtonsDisplay from "./ButtonsDisplay/ButtonsDisplay";
@@ -13,7 +12,6 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <p>Enter company name & use buttons to quickSearch</p>
         <input
           type="text"
