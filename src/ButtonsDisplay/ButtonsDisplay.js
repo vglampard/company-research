@@ -17,22 +17,24 @@ export default function ButtonsDisplay({ company }) {
     Benefits: ["employee+benefits+perks", ""],
     Controversies: ["controversy+scandal+issues", ""]
   };
+// the searchType param is now oprional
+
+
+
 
   // function that uses values taken from input (company name) and button (additional search terms and search type parameter) to open google window with basic/news/image search results.
-  function search(company, additionalStrings, param) {
+  function search(company, additionalStrings, searchType="") {
     const searchString = `${company}+${additionalStrings}`
     window.open(
-      GOOGLE_URL+searchString+param
+      GOOGLE_URL+searchString+searchType
     );
   }
 
 // turn object into array of objects
+// put in constants file and im/export
 // change object content to three kvs
 // turn object.keys.map into normap arraay.map 
 // change searchType param into optional param in the search function 
-// change what e.target.value is passed down as 
-// combine company & additional string into single variable to putin URL 
-// pull out google uRL into its own config variable
 
 
   // Return set of buttons that each run a different kind of google search on the company name
