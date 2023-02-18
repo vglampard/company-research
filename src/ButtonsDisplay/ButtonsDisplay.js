@@ -25,6 +25,13 @@ export default function ButtonsDisplay({ company }) {
     );
   }
 
+// turn object into array of objects
+// change object content to three kvs
+// turn object.keys.map into normap arraay.map 
+// change searchType param into optional param in the search function 
+// change what e.target.value is passed down as 
+
+
   // Return set of buttons that each run a different kind of google search on the company name
   return (
     <div>
